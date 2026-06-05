@@ -70,6 +70,9 @@
             color:#444;
             font-weight:500;
         }
+        p {
+            margin:8px 0;
+        }
         footer {
             text-align:center;
             margin-top:30px;
@@ -82,48 +85,36 @@
     </style>
 </head>
 <body>
-
-<div class="head">
-    <h1>📘 我的技术博客</h1>
-    <p>GitHub Pages · 记录与分享</p>
-</div>
-
-<div class="main">
-    <h2>📖 关于本站</h2>
-    <p>本博客使用 GitHub Pages 托管，是一个静态 HTML 站点。通过本实验学习 Git 基础操作、相对路径与绝对路径的区别。</p>
-
-    <h2>🖼️ 图片路径示例</h2>
-    <div class="img-box">
-        <div class="card">
-            🌍 绝对路径 1
-            <img src="https://picsum.photos/id/101/300/180" alt="绝对路径图片1">
-            <div class="path">https://picsum.photos/id/101/300/180</div>
-        </div>
-        <div class="card">
-            🌍 绝对路径 2
-            <img src="https://picsum.photos/id/104/300/180" alt="绝对路径图片2">
-            <div class="path">https://picsum.photos/id/104/300/180</div>
-        </div>
-        <div class="card">
-            📁 相对路径
-            <img src="images/sample.jpg" alt="相对路径图片" onerror="this.src='https://picsum.photos/id/106/300/180'">
-            <div class="path">相对路径：images/sample.jpg</div>
-            <small style="color:#aaa;">需在仓库中创建 images/sample.jpg</small>
-        </div>
+    <div class="head">
+        <h1>我的技术博客</h1>
+        <p>学习记录与分享</p>
     </div>
+    <div class="main">
+        <h2>关于本站</h2>
+        <p>本站基于 GitHub Pages 搭建静态博客，记录学习心得与技术分享。</p>
 
-    <h2>📝 最新文章</h2>
-    <ul>
-        <li><a href="#">GitHub Pages 快速搭建教程</a></li>
-        <li><a href="#">HTML 基础与语义化标签</a></li>
-        <li><a href="#">相对路径 vs 绝对路径</a></li>
-        <li><a href="#">为静态博客添加评论（utterances）</a></li>
-    </ul>
-</div>
+        <h2>图片路径演示</h2>
+        <div class="img-box">
+            <div class="card">
+                <img src="https://picsum.photos/id/1/300/200" alt="示例图片1">
+                <div class="path">绝对路径：https://picsum.photos/id/1/300/200</div>
 
-<footer>
-    <p>© 2025 个人博客 · 由 GitHub Pages 驱动</p>
-</footer>
+                <img src="https://picsum.photos/id/10/300/200" alt="示例图片2">
+                <div class="path">绝对路径：https://picsum.photos/id/10/300/200</div>
+            </div>
+            <div class="card">
+                <img src="images/sample.jpg" alt="本地图片示例">
+                <div class="path">相对路径：images/sample.jpg</div>
+            </div>
+        </div>
 
+        <h2>最新文章</h2>
+        <ul>
+            <li><a href="#">Github Pages入门</a></li>
+            <li><a href="#">HTML基础</a></li>
+            <li><a href="#">路径使用说明</a></li>
+        </ul>
+    </div>
+    <footer>©2025 个人博客 | GitHub Pages部署</footer>
 </body>
 </html>
