@@ -3,52 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <title>我的个人博客</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        *{margin:0;padding:0;box-sizing:border-box;}
-        body{max-width:800px;margin:20px auto;padding:0 15px;background:#f5f5f5;font-family:Arial}
-        .head{padding:25px;text-align:center;background:#667eea;color:#fff;border-radius:8px}
-        .main{margin-top:18px;padding:25px;background:#fff;border-radius:8px}
-        .img-box{display:flex;gap:20px;margin:20px 0}
-        .card{flex:1;padding:12px;background:#f7f7f7;border-radius:6px;text-align:center}
-        img{width:100%;border-radius:4px;margin-top:12px}
-        .path{font-family:consolas;font-size:12px;color:#555;margin:6px 0}
-        footer{text-align:center;margin-top:20px;color:#666;font-size:14px}
-        ul{margin:10px 0 10px 20px}
+        * {margin:0;padding:0;box-sizing:border-box;}
+        body {
+            max-width:800px;
+            margin:30px auto;
+            padding:0 15px;
+            background:#f0f2f5;
+            font-family: 'Roboto', sans-serif;
+            color:#333;
+            line-height:1.6;
+        }
+        a {color:#667eea; text-decoration:none;}
+        a:hover {text-decoration:underline;}
+
+        .head {
+            padding:30px 20px;
+            text-align:center;
+            background:#667eea;
+            color:#fff;
+            border-radius:12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .main {
+            margin-top:25px;
+            padding:25px;
+            background:#fff;
+            border-radius:12px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.03);
+        }
+        .img-box {
+            display:flex;
+            flex-wrap:wrap;
+            gap:20px;
+            margin:20px 0;
+        }
+        .card {
+            flex:1 1 300px;
+            background:#fafafa;
+            border-radius:10px;
+            text-align:center;
+            padding:15px;
+            box-shadow:0 2px 6px rgba(0,0,0,0.05);
+            transition:transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform:translateY(-4px);
+            box-shadow:0 6px 15px rgba(0,0,0,0.1);
+        }
+        img {
+            width:100%;
+            border-radius:6px;
+            margin-top:12px;
+            display:block;
+        }
+        .path {
+            font-family: 'Consolas', monospace;
+            font-size:12px;
+            color:#888;
+            margin:6px 0;
+            word-break:break-all;
+        }
+        h2 {
+            margin-bottom:12px;
+            color:#444;
+            font-weight:500;
+        }
+        footer {
+            text-align:center;
+            margin-top:30px;
+            color:#999;
+            font-size:14px;
+        }
+        ul {
+            margin:12px 0 12px 20px;
+        }
     </style>
 </head>
 <body>
-    <div class="head">
-        <h1>我的技术博客</h1>
-        <p>学习记录与分享</p>
-    </div>
-    <div class="main">
-        <h2>关于本站</h2>
-        <p>本站基于GitHub Pages搭建静态博客。</p>
 
-        <h2 style="margin-top:20px">图片路径演示</h2>
-        <div class="img-box">
-            <div class="card">
-                <img src="https://picsum.photos/id/1/300/200">
-                <div class="path">绝对路径：https://picsum.photos/id/1/300/200</div>
+<div class="head">
+    <h1>📘 我的技术博客</h1>
+    <p>GitHub Pages · 记录与分享</p>
+</div>
 
-                <img src="https://picsum.photos/id/10/300/200">
-                <div class="path">绝对路径：https://picsum.photos/id/10/300/200</div>
-                <p style="font-size:13px;margin-top:8px">网络公共图库</p>
-            </div>
-            <div class="card">
-                <img src="images/sample.jpg">
-                <div class="path">相对路径：images/sample.jpg</div>
-                <p style="font-size:13px;margin-top:8px">本地项目资源</p>
-            </div>
+<div class="main">
+    <h2>📖 关于本站</h2>
+    <p>本博客使用 GitHub Pages 托管，是一个静态 HTML 站点。通过本实验学习 Git 基础操作、相对路径与绝对路径的区别。</p>
+
+    <h2>🖼️ 图片路径示例</h2>
+    <div class="img-box">
+        <div class="card">
+            🌍 绝对路径 1
+            <img src="https://picsum.photos/id/101/300/180" alt="绝对路径图片1">
+            <div class="path">https://picsum.photos/id/101/300/180</div>
         </div>
-
-        <h2>最新文章</h2>
-        <ul>
-            <li><a href="#">Github Pages入门</a></li>
-            <li><a href="#">HTML基础</a></li>
-            <li><a href="#">路径使用说明</a></li>
-        </ul>
+        <div class="card">
+            🌍 绝对路径 2
+            <img src="https://picsum.photos/id/104/300/180" alt="绝对路径图片2">
+            <div class="path">https://picsum.photos/id/104/300/180</div>
+        </div>
+        <div class="card">
+            📁 相对路径
+            <img src="images/sample.jpg" alt="相对路径图片" onerror="this.src='https://picsum.photos/id/106/300/180'">
+            <div class="path">相对路径：images/sample.jpg</div>
+            <small style="color:#aaa;">需在仓库中创建 images/sample.jpg</small>
+        </div>
     </div>
-    <footer>©2025个人博客 | GitHub Pages部署</footer>
+
+    <h2>📝 最新文章</h2>
+    <ul>
+        <li><a href="#">GitHub Pages 快速搭建教程</a></li>
+        <li><a href="#">HTML 基础与语义化标签</a></li>
+        <li><a href="#">相对路径 vs 绝对路径</a></li>
+        <li><a href="#">为静态博客添加评论（utterances）</a></li>
+    </ul>
+</div>
+
+<footer>
+    <p>© 2025 个人博客 · 由 GitHub Pages 驱动</p>
+</footer>
+
 </body>
 </html>
